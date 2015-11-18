@@ -79,18 +79,20 @@ To install with yum do the following:
 DEBs for Debian and Ubuntu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Available in the `Wazuh repository <http://ossec.wazuh.com/repos/apt/>`_.
+Available in the `Wazuh repository <http://ossec.wazuh.com>`_.
 
 +------------------+-----------------------------------------------------------------------------+
 | Debian/Ubuntu                                                                                  |
 +==================+=============================================================================+
 | OSSEC Server     | `Debian`_, `Ubuntu`_                                                        |
 +------------------+-----------------------------------------------------------------------------+
-| OSSEC Agent      | `Debian`_, `Ubuntu`_                                                        |
+| OSSEC Agent      | `Debian_agent`_, `Ubuntu_agent`_                                            |
 +------------------+-----------------------------------------------------------------------------+
 
 .. _Debian: http://ossec.wazuh.com/repos/apt/debian/pool/main/o/ossec-hids/
 .. _Ubuntu: http://ossec.wazuh.com/repos/apt/ubuntu/pool/main/o/ossec-hids/
+.. _Debian_agent: http://ossec.wazuh.com/repos/apt/debian/pool/main/o/ossec-hids-agent/
+.. _Ubuntu_agent: http://ossec.wazuh.com/repos/apt/ubuntu/pool/main/o/ossec-hids-agent/
 
 DEB Installation
 ================
@@ -103,17 +105,17 @@ Step 1. Install the apt-get repository key:
 
     # apt-key adv --fetch-keys http://ossec.wazuh.com/repos/apt/conf/ossec-key.gpg.key
 
-Step 2. Add the repository for Debian (available distributions are Sid, Jessie and Wheezy):
+Step 2. Add the repository for Debian, changing "wheezy" for your actual distribution (available values are wheezy, jessie, stretch and sid):
 
 .. code:: console
 
-    # echo ‘deb http://ossec.wazuh.com/repos/apt/debian wheezy main’ >> /etc/apt/sources.list
+    # echo 'deb http://ossec.wazuh.com/repos/apt/debian wheezy main' >> /etc/apt/sources.list
 
-Or add the repository for Ubuntu (available distributions are Precise, Trusty and Utopic):
+Or add the repository for Ubuntu, changing "precise" for your actual distribution (available values are precise, trusty, vivid and wily):
 
 .. code:: console
 
-    # echo ‘deb http://ossec.wazuh.com/repos/apt/ubuntu precise main’ >> /etc/apt/sources.list
+    # echo 'deb http://ossec.wazuh.com/repos/apt/ubuntu precise main' >> /etc/apt/sources.list
 
 Step 3. Update the repository:
 
